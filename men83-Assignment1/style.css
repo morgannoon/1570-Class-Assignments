@@ -1,0 +1,699 @@
+/* =======================
+   GLOBAL STYLES
+======================= */
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: black;
+  user-select: none;
+  overflow-x: hidden;
+}
+
+body.box.nav {
+  align-items: flex-end;
+}
+
+body.inverted {
+  background-color: white;
+  color: black;
+}
+
+
+
+
+/* =======================
+   TYPOGRAPHY
+======================= */
+h1 {
+  font-family: "MuseoModerno", sans-serif;
+  font-weight: bold;
+  font-size: 100px;
+  font-style: italic;
+}
+
+h2 {
+  font-family: "MuseoModerno", sans-serif;
+  font-weight: bold;
+  font-size: 40px;
+  color: white;
+}
+
+h1.white.overlapper {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "MuseoModerno", sans-serif;
+  font-weight: bold;
+  font-size: 100px;
+  color: white;
+  text-align: center;
+  width: max-content;
+}
+
+h2.white.overlapper {
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "MuseoModerno", sans-serif;
+  font-weight: bold;
+  font-size: 40px;
+  color: white;
+  text-align: center;
+}
+
+h1.green {
+  font-family: "MuseoModerno", sans-serif;
+  font-weight: bold;
+  font-size: 100px;
+  background: linear-gradient(90deg, #2C8728, #ACD4AB);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+h1.green.centering {
+  text-align: center;
+  margin: 0;
+}
+
+h2.darkOrange {
+  color: #F35130;
+  font-family: "B612 Mono", monospace;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+/* =======================
+   LAYOUT WRAPPERS
+======================= */
+.ireland {
+  position: relative;
+  width: 100%;
+  height: auto;
+
+}
+
+.ireland2 {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding: 0;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+.ireland3 {
+  position: relative;
+  width: 100%;
+  height: auto;
+  padding: 2rem;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  overflow: auto;
+}
+
+img.collage {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+img.dance {
+  scale: 100%;
+}
+
+/* =======================
+   NAVIGATION
+======================= */
+.box.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: auto;
+  height: 90px;
+  padding: 0 2rem;
+  font-family: "MuseoModerno", sans-serif;
+  font-size: 24px;
+  color: white;
+  position: relative;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.box.nav a .name {
+  height: 90px;
+  padding: 0 2rem;
+  font-family: "MuseoModerno", sans-serif;
+  font-size: 24px;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  transition: opacity 0.2s;
+  align-self: flex-start;
+}
+
+nav {
+  display: flex;
+  background: transparent;
+  position: relative;
+}
+
+nav ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li a {
+  font-family: "MuseoModerno", sans-serif;
+  font-size: 24px;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+nav ul li a:hover {
+  opacity: 0.7;
+}
+
+/* Hamburger (hidden on desktop) */
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+.hamburger-icon {
+  width: 60px;
+  height: 60px;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  border-radius: 4px;
+}
+
+nav.open {
+  display: block;
+  background: white;
+  border: 2px solid black;
+  border-radius: 6px;
+  margin-right: 20px;
+  padding: 10px;
+  z-index: 2000;
+}
+
+/* =======================
+   CONTENT CONTAINERS
+======================= */
+.container {
+  display: flex;
+  justify-content: center;
+  margin: auto 0;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 10px 0 0 0;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  height: calc(100vh - 90px);
+  text-align: center;
+}
+
+.container.column {
+  flex-wrap: nowrap;
+}
+
+
+
+/* =======================
+   WORD CAROUSEL
+======================= */
+.wordCarousel-wrapper {
+  background: linear-gradient(90deg, #F35130, #E7AF15);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "MuseoModerno", sans-serif;
+  font-weight: bold;
+  font-size: 100px;
+  font-style: italic;
+}
+
+.wordCarousel {
+  background: linear-gradient(90deg, #F35130, #E7AF15);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "MuseoModerno", sans-serif;
+  font-weight: bold;
+  font-size: 100px;
+  font-style: italic;
+}
+
+.wordCarousel div li {
+  display: flex;
+  align-items: center;
+  line-height: 150px;
+  padding-left: 1.5rem;
+  font-weight: bold;
+}
+
+
+.wordCarousel div {
+  overflow: hidden;
+  position: relative;
+  float: right;
+  height: 150px;
+  z-index: 10;
+  display: flex;
+  top: 0px;
+  font-family: "MuseoModerno", sans-serif;
+  font-weight: bold;
+  font-size: 100px;
+  font-style: italic;
+  background: linear-gradient(90deg, #F35130, #E7AF15);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding: 0;
+
+}
+
+.cent {
+  position: relative;
+  top: 300px;
+}
+
+.flip4 {
+  animation: flip4 10s cubic-bezier(0.23, 1, 0.32, 1.2) infinite;
+  padding: 0;
+}
+
+@keyframes flip4 {
+  0% {
+    margin-top: -600px;
+  }
+
+  5% {
+    margin-top: -450px;
+  }
+
+  25% {
+    margin-top: -450px;
+  }
+
+  30% {
+    margin-top: -300px;
+  }
+
+  50% {
+    margin-top: -300px;
+  }
+
+  55% {
+    margin-top: -150px;
+  }
+
+  75% {
+    margin-top: -150px;
+  }
+
+  80% {
+    margin-top: 0;
+  }
+
+  99% {
+    margin-top: 0;
+  }
+
+  100% {
+    margin-top: -600px;
+  }
+}
+
+
+/* =======================
+   TABLE STYLE
+======================= */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+  margin: 2rem 0;
+  font-family: "MuseoModerno", sans-serif;
+
+}
+
+th,
+td {
+  padding: 1rem;
+  vertical-align: top;
+}
+
+th {
+  background: linear-gradient(180deg, #2C8728, #ffffff);
+  font-size: 1.2rem;
+  color: white;
+}
+
+td li {
+  font-family: "MuseoModerno", sans-serif;
+  font-weight: bold;
+  display: flex;
+}
+
+/* =======================
+   BUTTON STYLE
+======================= */
+
+button {
+  padding: 0.5rem 1rem;
+  font-size: 16px;
+  margin-right: 1rem;
+  cursor: pointer;
+  font-family: "MuseoModerno", sans-serif;
+  background-color: black;
+  border-color: white;
+  color: white;
+  border-radius: 30px;
+}
+
+
+
+/* =======================
+   RESPONSIVE STYLES
+======================= */
+@media screen and (max-width: 1100px) {
+  h1 {
+    font-size: clamp(2rem, 10vw, 4rem);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  h2 {
+    font-size: clamp(1rem, 6vw, 2rem);
+  }
+
+  .wordCarousel div.cent {
+    right: 0;
+    display: flex;
+    padding: 0;
+  }
+
+  .wordCarousel,
+  .wordCarousel div {
+    font-size: 80px;
+    right: 80px;
+    top: -15px;
+    padding: 0 0 0 100px;
+    gap: 1rem;
+  }
+
+
+
+  .container.projects {
+    height: fit-content;
+    background-color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  h1.white.overlapper {
+    font-size: 40px;
+  }
+
+  h2.white.overlapper {
+    font-size: 20px;
+  }
+}
+
+/* Mobile navigation */
+@media (max-width: 768px) {
+
+  .hamburger {
+    display: block;
+  }
+
+  nav {
+    display: none;
+    position: absolute;
+    top: 90px;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+    background: transparent;
+  }
+
+  .cent {
+    display: flex;
+
+  }
+
+
+  nav ul {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  nav ul li a {
+    font-size: 20px;
+    color: black;
+  }
+
+  .wordCarousel {
+    right: 30px;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+  }
+
+}
+
+/* =======================
+   ABOUT ME STYLE
+======================= */
+
+.about {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 0;
+  width: 100%;
+  flex-direction: row;
+  align-items: center;
+  min-height: calc(100vh - 90px);
+  background-color: white;
+  overflow: hidden;
+}
+
+
+
+h1.meet {
+  background: linear-gradient(90deg, #F35130, #E7AF15);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+}
+
+.me {
+  display: block;
+  margin: 0 auto;
+  max-width: 70%;
+  height: auto;
+  object-fit: contain;
+}
+
+p {
+  font-family: "B612 Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+  color: black;
+  text-align: left;
+  line-height: 1.5rem;
+}
+
+.space {
+  display: flex;
+  flex-wrap: wrap;
+  width: auto;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.space.stack {
+  flex-direction: column;
+  width: 60%;
+}
+
+
+.space-wrap {
+  z-index: -1;
+  position: relative;
+  top: 40%;
+
+}
+
+@media (max-width: 900px) {
+  .about {
+    flex-direction: column;
+    height: auto;
+    padding: 0;
+  }
+
+  .space {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .space.stack {
+    width: 100%;
+    text-align: center;
+  }
+
+  p {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .me {
+    max-width: 30%;
+  }
+}
+
+/* =======================
+   FOOTER STYLE
+======================= */
+footer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2rem 1rem;
+}
+
+.footer.container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-start;
+  gap: 2rem;
+  width: 100%;
+  height: auto;
+  background-image: none;
+}
+
+footer a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+footer a:hover {
+  opacity: 0.7;
+}
+
+.case {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+}
+
+.header {
+  font-family: "MuseoModerno", sans-serif;
+  font-weight: bold;
+  font-size: 32px;
+  background: linear-gradient(90deg, #F35130, #E7AF15);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 0.5rem;
+}
+
+.case.contacts {
+  font-family: "B612 Mono", monospace;
+  font-weight: 400;
+  font-size: 14px;
+  color: white;
+  gap: 0.5rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.contact-item img {
+  width: 20px;
+  height: 20px;
+}
+
+
+
+.case img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+
+.case.copyright {
+  margin-top: 1rem;
+  font-family: "B612 Mono", monospace;
+  font-size: 12px;
+  color: white;
+  text-align: center;
+  align-items: center;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .footer.container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .case {
+    align-items: center;
+  }
+
+  .case.contacts {
+    align-items: center;
+  }
+}
+
+
+iframe {
+  border-radius: 12px;
+  border: 2px solid black;
+  height: 100vh;
+  width: 100vw;
+}
