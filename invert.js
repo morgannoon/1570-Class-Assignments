@@ -1,10 +1,10 @@
 function invertColors() {
   const body = document.body;
   if (body.style.backgroundColor === "white") {
-    body.style.backgroundColor = "black"; // restore original
+    body.style.backgroundColor = "black"; 
     body.style.filter = "invert(0)";
   } else {
-    body.style.backgroundColor = "white"; // invert background
+    body.style.backgroundColor = "white"; 
     body.style.filter = "invert(1)";
   }
 }
