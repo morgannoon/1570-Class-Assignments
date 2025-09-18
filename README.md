@@ -1,1 +1,1 @@
-This will be the repository for all the assignments for this class. Each folder is a different asignment and has their own readMe file. Please access the wbe pages via branch.
+This will be the repository for all the assignments for this class. Each folder is a different asignment and has their own readMe file. Please access the web pages via branch.
