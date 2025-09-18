@@ -74,6 +74,3 @@ NO ERRORS :)
 <img width="573" height="446" alt="Screenshot 2025-09-18 at 1 23 51 PM" src="https://github.com/user-attachments/assets/6b63fb08-1102-4407-bdf6-4dfa4efa87fe" />
 
 
-LINK TO HTML W3C VAlIDATION
-
-LINK TO CSS W3C VAlIDATION
